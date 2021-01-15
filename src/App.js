@@ -1,10 +1,10 @@
-import './App.css';
-import Search from './components/Search'
-import Recipe from './components/Recipe'
+import './App.scss';
+import Search from './components/search/Search'
+import Recipe from './components/recipe/Recipe'
 
 function App() {
   return (
-    <div>
+    <div class="container">
       <Search />
 
       <Recipe />

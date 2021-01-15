@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import axios from 'axios';
-import Food from './Food';
+import Food from '../food/Food';
 
 class Recipe extends Component{
     state = {
@@ -9,19 +9,18 @@ class Recipe extends Component{
     }
 
     componentDidMount() {
-        const url = ""
-        axios.get("localhost:3001/")
+        const url = "http://localhost:3001/api/v1/foods"
+        axios.get(url)
             .then(res => res.data)
             .then((data) => {
                 this.setState({ foods: data });
-                console.log(this.state.foods)
             })
     }
     
 
     render() {
         return (
-            <div>
+            <div className="search-container">
                 {this.state.foods.map((food) => 
                     <Food food={food} key={food.id}/>
                 )}
