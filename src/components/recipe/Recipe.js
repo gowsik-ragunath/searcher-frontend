@@ -1,6 +1,4 @@
-import { render } from '@testing-library/react';
 import React, { Component } from 'react';
-import axios from 'axios';
 import Food from '../food/Food';
 
 class Recipe extends Component{
@@ -10,10 +8,10 @@ class Recipe extends Component{
 
     componentDidMount() {
         const url = "http://localhost:3001/api/v1/foods"
-        axios.get(url)
-            .then(res => res.data)
-            .then((data) => {
-                this.setState({ foods: data });
+        fetch(url)
+          .then(res => res.json())
+          .then((data) => {
+              this.setState({ foods: data });
             })
     }
     
