@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-function food(props) {
+function Food(props) {
     return (
-        <div className="card">
-            <div className="title">{props.food.name}</div>
-            <div className="description">{props.food.rich_text_description.body}</div>
-        </div>
+    <Link to={`/foods/${props.food.id}`}>
+      <div className="card">
+        <div className="title">{props.food.name}</div>
+        <div className="description">{props.food.rich_text_description.body}</div>
+      </div>
+    </Link>
     )
 }
 
-export default food;
+export default Food;

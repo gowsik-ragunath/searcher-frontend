@@ -7,12 +7,12 @@ class Recipe extends Component{
     }
 
     componentDidMount() {
-        const url = "http://localhost:3001/api/v1/foods"
+        const url = "http://localhost:3001/api/v1/foods";
         fetch(url)
           .then(res => res.json())
           .then((data) => {
               this.setState({ foods: data });
-            })
+        })
     }
     
 
