@@ -1,12 +1,9 @@
 import './App.scss';
-import Search from './components/search/Search'
-import Recipe from './components/recipe/Recipe'
+import Recipe from './components/recipe/Recipe';
 
 function App() {
   return (
     <div class="container">
-      <Search />
-
       <Recipe />
     </div>
   );

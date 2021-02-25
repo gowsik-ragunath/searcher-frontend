@@ -15,14 +15,19 @@
 	margin: 2rem 0;
 }
 
+.link {
+	text-decoration: none;
+}
+
 .container .card:hover {
+    text-decoration: none;
 	transform: translateY(5px) translateX(-2.5px);
 	transition: 0.5s ease-in-out;
 	padding: 10px 15px;
 	margin-top: 30px;
 	border-radius: 0.5rem;
 	width: 200px;
-	heigth: 400px;
+	height: 190px;
 	box-shadow: 6px 1px 15px 10px #222426;
 	background-color: #b9375e;
 
@@ -40,6 +45,7 @@
 }
 
 .container .card {
+    text-decoration: none;
   	padding: 10px 15px;
 	margin-top: 30px;
 	margin-left: -1px;
@@ -47,7 +53,7 @@
 	box-shadow: -6px 7px 15px 6px #222426;
 	background-color: #b9375e;
 	width: 200px;
-	heigth: 400px;
+	height: 190px;
 	transition-property: width, height;
 	transition-duration: 0.75s;
 

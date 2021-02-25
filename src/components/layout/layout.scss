@@ -1,0 +1,11 @@
+.navbar {
+    padding: 1.25rem 4rem 1.25rem 4rem;
+    background-color: #bde0fe;
+    box-shadow: inset;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+        font-size: 1.45rem;
+    }
+}
