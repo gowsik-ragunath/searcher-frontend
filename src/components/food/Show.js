@@ -20,24 +20,21 @@ function FoodShow(props) {
 		});
     const url = `http://localhost:3001/api/v1/foods/${id}`;
 
-    useEffect(() => (
-        fetch(url)
-          .then(res => 
-            {
-              return res.json();
-            })
-          .then((data) => {
-            setFood({...food, id: data.id, name: data.name, body: data.rich_text_description.body });
-						console.log(data.id)
-						console.log(food)
-        })
-    ), [food]); // TODO: need to fix infinite fetch calls here
+    
+	useEffect(() => {
+		const fetchFood = async() => {
+			const res = await fetch(url);
+			const data = await res.json();
+			setFood(data);
+		}
+		fetchFood();
+	}, [])
 
 
     return (
 			<div>
-        <div className="heading">{food.name}</div>
-        <div className="content">{food.body}</div>
+				<div className="heading">{food.name}</div>
+				<div className="content">{food.rich_text_description.body}</div>
 			</div>
     )
 }
