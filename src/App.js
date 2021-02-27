@@ -3,7 +3,7 @@ import Recipe from './components/recipe/Recipe';
 
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <Recipe />
     </div>
   );
