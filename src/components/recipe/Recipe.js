@@ -6,7 +6,6 @@ class Recipe extends Component{
         foods: []
     }
 
-
     componentDidMount() {
         const url = "http://localhost:3001/api/v1/foods";
         fetch(url)
@@ -16,15 +15,13 @@ class Recipe extends Component{
         })
     }
     
-
     render() {
         return (
             <div className="search-container">
                 {this.state.foods.map((food) => 
                     <Food food={food} key={food.id}/>
                 )}
-            </div>
-                
+            </div>   
         )
     }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import Search from '../search/Search';
+import SearchForm from '../search/SearchForm';
 
 function Navbar() {
     return (
         <div className="navbar">
             <div className="title">Searcher</div>
 
-            <Search />
+            <SearchForm />
         </div>
     )
 }
