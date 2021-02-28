@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import Food from '../food/Food';
 
 class Recipe extends Component{
-    state = {
-        foods: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            foods: []
+        }
     }
 
     componentDidMount() {
@@ -17,10 +20,12 @@ class Recipe extends Component{
     
     render() {
         return (
-            <div className="search-container">
-                {this.state.foods.map((food) => 
-                    <Food food={food} key={food.id}/>
-                )}
+            <div className="container">
+                <div className="search-container">
+                    {this.state.foods.map((food) => 
+                        <Food food={food} key={food.id}/>
+                    )}
+                </div>
             </div>   
         )
     }
